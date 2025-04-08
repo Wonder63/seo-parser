@@ -7,6 +7,8 @@ app = Flask(__name__)
 @app.route("/extract-seo", methods=["POST"])
 def extract_seo():
     html = request.data.decode("utf-8", errors="replace")
+    print("==== HTML reçu ====")
+print(html[:1000])  # pour n'afficher que le début
     soup = BeautifulSoup(html, "html.parser")
 
     # Meta Title
