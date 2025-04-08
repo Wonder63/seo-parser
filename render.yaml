@@ -1,0 +1,8 @@
+
+services:
+  - type: web
+    name: seo-parser
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python extract_seo_api.py"
+    plan: free
